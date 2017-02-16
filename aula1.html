@@ -1,6 +1,21 @@
 <html>
 	<head>
 		<title> Cadastro de usuario</title>
+		<script>
+		function exebirSenha(){
+			var elsenha = document.getElementById("txtSenha");
+			if(elsenha.type=="text"){				
+				elsenha.type="password";
+				botaoSenha.value="exibir senha";
+			}else{
+				elsenha.type="text";	
+				botaoSenha.value="ocultar senha";
+			}
+		}
+		
+		
+		
+		</script>
 	</head>
 	<body>
 		<form>
@@ -11,6 +26,7 @@
 			<input type="password" value="" name="txtSenha" id="txtSenha"/>
 		
 			<input type="submit" value="salvar"/>
+			<input type="button" onclick="exebirSenha()" value="Ver senha" id="botaoSenha"/>
 		</form>
 	</body>	
 </html>
