@@ -21,6 +21,15 @@
 			nome.value = senha.value;
 			senha.value = aux;
 		}
+		function alterarLogoucdb(){
+			document.getElementById('img1').src="http://site.ucdb.br/public/eventos/15185-logo-ucdb-b.png";
+		}
+		function alterarLogoucdb1(){
+			document.getElementById('img1').src="http://comlimao.com/wp-content/uploads/2015/09/novo-logo-google-2015-reduz-consumo-servidores-com-limao-011.jpg";
+		}
+		function alterarLogoucdb2(){
+			document.getElementById('img1').src="http://site.ucdb.br/public/eventos/15185-logo-ucdb-b.png";
+		}
 		</script>
 	</head>
 	<body>
@@ -38,6 +47,17 @@
 		
 			<input type="submit" value="salvar"/>
 			<input type="button" onclick="mudarCampo()" value="mudar campo" />
+			
+	<div></div>
+			<img id="img1" src="" />
+
+			
+			<input type="button" onclick="alterarLogoucdb()" value="Ver senha" id="botaoSenha"/>
+			<input type="button" onclick="alterarLogoucdb1()" value="Ver senha" id="botaoSenha"/>
+			<input type="button" onclick="alterarLogoucdb2()" value="Ver senha" id="botaoSenha"/>
+			
+			
+			
 		</form>
 	</body>	
 </html>
