@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title> Cadastro de usuario</title>
-		<script>
+		<script type="text/javascript">
 		function exebirSenha(){
 			var elsenha = document.getElementById("txtSenha");
 			if(elsenha.type=="text"){				
@@ -12,21 +12,32 @@
 				botaoSenha.value="ocultar senha";
 			}
 		}
-		
-		
-		
+		function mudarCampo(){
+			var nome = document.getElementById("txtNome2");
+			var senha = document.getElementById("txtSenha2");
+			var aux="";
+			
+			aux = nome.value;
+			nome.value = senha.value;
+			senha.value = aux;
+		}
 		</script>
 	</head>
 	<body>
 		<form>
 			<label id="lblUsername"> nome </label>
 			<input type="text" value="" name="txtNome" id="txtNome"/>
-		
 			<label id="lblUsername"> senha </label>
-			<input type="password" value="" name="txtSenha" id="txtSenha"/>
+			<input type="text" value="" name="txtSenha" id="txtSenha"/>
+			<input type="button" onclick="exebirSenha()" value="Ver senha" id="botaoSenha"/>
+		<div></div>
+			<label id="lblUsername"> Elemento 1 </label>
+			<input type="text" name="txtNome" id="txtNome2"/>
+			<label id="lblUsername"> Elemento 2 </label>
+			<input type="text" name="txtSenha" id="txtSenha2"/>
 		
 			<input type="submit" value="salvar"/>
-			<input type="button" onclick="exebirSenha()" value="Ver senha" id="botaoSenha"/>
+			<input type="button" onclick="mudarCampo()" value="mudar campo" />
 		</form>
 	</body>	
 </html>
